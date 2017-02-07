@@ -24,6 +24,8 @@ $(function() {
 					error : function(response){
 		                var errorMessage = response.responseJSON.error.message;
 		                console.log(errorMessage);
+		                $("#first").hide();
+						$("#second").hide();
 		        	}
 				});//ajax request ends here
 	    	}
@@ -31,6 +33,8 @@ $(function() {
 		error : function(response){
             var errorMessage = response.responseJSON.error.message;
             console.log(errorMessage);
+            $("#first").hide();
+			$("#second").hide();
     	}
 	});//ajax request ends here
 
@@ -90,6 +94,8 @@ $(function() {
 			error : function(response){
                 var errorMessage = response.responseJSON.error.message;
                 console.log(errorMessage);
+                $("#first").hide();
+				$("#second").hide();
         	}
 		});//ajax request ends to fetch basic details of a user
 	}
@@ -239,6 +245,8 @@ $(function() {
 				                    var errorMessage = response.responseJSON.error.message;
 				                    $(".panelBody_"+i).prepend('<h5 style="float: left;">'+errorMessage+'</h5>');
 				                    $(".image_"+i).removeClass();
+				                    $("#first").hide();
+									$("#second").hide();	
 			                	}
 							});//ajax ends to fetch the details of a particular feed
 						}else {
@@ -255,6 +263,8 @@ $(function() {
 				error : function(response){
 	                var errorMessage = response.responseJSON.error.message;
 	                console.log(errorMessage);
+	                $("#first").hide();
+					$("#second").hide();
 	        	}
 			});//ajax request ends to fetch the feed of a user
 		}else {
